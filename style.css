@@ -1,0 +1,168 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+}
+
+header{
+    background-color: rgb(30, 16, 157);
+}
+
+li{
+    list-style: none;   
+}
+
+a{
+    color: #fff;
+text-decoration: none;
+}
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14px;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navmenu{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-right: 20px;
+}
+
+.nav-link{
+    transition: 0.5s;
+}
+
+.nav-link:hover{
+    color: rgb(108, 117, 241);
+}
+
+.hamburguer{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+border-radius: 2px;
+margin: 5px auto;
+background-color: #fff;
+transition: 0.3s ease-in-out;
+}
+
+.responsivo{
+    display: flex;
+    margin: 50px;
+    
+}
+
+.black{
+    background-color:black;
+    margin-right: 5px ;
+    padding: 50px;
+}
+.verde{
+    background-color: rgb(87, 195, 87);
+    padding: 50px;
+    margin-right: 5px ;
+}
+.amarelo{
+    background-color:yellow;
+    padding: 50px;
+    margin-right: 5px ;
+}
+.vermelho{
+    background-color: red;
+    padding: 50px;
+    margin-right: 5px ;
+
+}
+
+@media(max-width: 768px){
+.logo{
+    font-size: 1.3rem;
+}     
+
+
+    .hamburguer{
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2){
+     opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navmenu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color:rgb(30, 16, 157) ;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 10px 0;
+    }
+
+    .navmenu.active{
+        left: 0;
+    }
+        .responsivo {
+          display: block;
+          display: grid;
+          place-items: center;   
+        }
+
+        .black{
+            background-color:black;
+            margin-right: 5px ;
+            margin-top: 5px;
+            width: 90px;
+            padding: 50px;
+        }
+        .verde{
+            background-color: green;
+            padding: 50px;
+            width: 90px;
+            margin-top: 5px;
+            margin-right: 5px ;
+        }
+        .amarelo{
+            background-color:yellow;
+            padding: 50px;
+            width: 90px;
+            margin-top: 5px;
+            margin-right: 5px ;
+        }
+        .vermelho{
+            background-color: red;
+            padding: 50px;
+            width: 90px;
+            margin-top: 5px;
+            margin-right: 5px ;
+        
+        }
+      
+}
